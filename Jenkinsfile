@@ -6,7 +6,10 @@ pipeline{
         stage("Verify awscli installation"){
             steps{
                 script{
-                      sh 'aws --version'
+                      sh '''
+                      aws --version
+                      aws ec2 describe-instances
+                      '''
                 }
               
             }
