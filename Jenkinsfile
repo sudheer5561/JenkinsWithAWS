@@ -5,7 +5,10 @@ pipeline{
     stages{
         stage("Verify awscli installation"){
             steps{
-                sh 'aws --verison'
+                script{
+                      sh 'aws --version'
+                }
+              
             }
           
         }
